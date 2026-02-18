@@ -1,53 +1,54 @@
 # 🎵 Vodafone Music Subscription Prediction
 
-## 📌 Огляд проєкту (Project Overview)
-Цей проєкт присвячений розробці моделі машинного навчання для прогнозування ймовірності підписки абонентів Vodafone на музичний сервіс.
-Це задача **бінарної класифікації** (Binary Classification), де цільова змінна (Target) вказує, чи підписався користувач (1) чи ні (0).
+## 📌 Project Overview
+This project is dedicated to developing a machine learning model for predicting the likelihood of Vodafone subscribers signing up for a music service.
+This is a **binary classification** task, where the target variable indicates whether the user has subscribed (1) or not (0).
 
-**Бізнес-мета:** Оптимізація маркетингових кампаній шляхом виявлення клієнтів, які з високою ймовірністю зацікавлені у послузі. Це дозволить зменшити витрати на комунікацію з незацікавленими абонентами.
-
----
-
-## 🎯 Цілі та Метрики (Goals & Metrics)
-* **Основна метрика:** ROC-AUC. Ця метрика обрана, оскільки вона дозволяє оцінити якість моделі незалежно від обраного порогу класифікації та є стійкою до дисбалансу класів.
-* **Додаткові метрики:** F1-score, Precision, Recall.
+**Business goal:** Optimize marketing campaigns by identifying customers who are highly likely to be interested in the service. This will reduce the cost of communicating with uninterested subscribers.
 
 ---
 
-## 📂 Структура проєкту (Project Structure)
-Проєкт організовано згідно зі стандартами Data Science:
+## 🎯 Goals & Metrics
+* **Primary metric:** ROC-AUC. This metric was selected because it allows the quality of the model to be evaluated independently of the selected classification threshold and is resistant to class imbalance.
+* **Additional metrics:** F1-score, Precision, Recall.
+
+---
+
+## 📂 Project Structure
+The project is organized this way:
+
 ```
 ├── data/
-│   ├── raw/             # Вихідні дані (незмінювані)
-│   └── processed/       # Очищені дані для моделювання
-├── notebooks/           # Jupyter Notebooks з аналізом та кодом
-│   ├── 01_eda.ipynb     # Розвідувальний аналіз даних (EDA)
-│   └── 02_cleaning.ipynb # Очистка даних та обробка пропусків
-├── src/                 # Скрипти Python (опційно)
-├── README.md            # Опис проєкту
-└── requirements.txt     # Список необхідних бібліотек
+│   ├── raw/             # Raw data (unchanged)
+│   └── processed/       # Cleaned data for modeling
+├── notebooks/           # Jupyter Notebooks with analysis and code
+│   ├── 01_eda.ipynb     # Exploratory data analysis (EDA)
+│   └── 02_cleaning.ipynb # Data cleaning and missing 
+├── src/                 # Python scripts
+├── README.md            # Project description
+└── requirements.txt     # List of required libraries
 ```
 ---
 
-## 🛠 Технологічний стек (Tech Stack)
-* **Python 3.x**
-* **Pandas, NumPy:** Обробка даних
-* **Matplotlib, Seaborn:** Візуалізація та EDA
-* **Scikit-learn:** Машинне навчання (буде додано у Спринті 2)
-* **Jupyter Notebook:** Середовище розробки
+## 🛠 Tech Stack
+* **Python 3.11.9**
+* **Pandas, NumPy:** Data processing
+* **Matplotlib, Seaborn:** Visualization and EDA
+* **Scikit-learn:** Machine learning
+* **Jupyter Notebook:** Development environment
 
 ---
 
-## 🚀 Як запустити проєкт (Getting Started)
-1. Клонуйте репозиторій:
+## 🚀 Getting Started
+1. Clone the repository:
    ```bash
-   git clone [https://github.com/osypencol/vodafone-music-project.git](https://github.com/osypencol/vodafone-music-project.git)
-2. Встановіть необхідні бібліотеки:
+   git clone [https://github.com/osypenkoI/vodafone-music-project.git](https://github.com/osypenkoI/vodafone-music-project.git)
+2. Install the necessary libraries:
    ```bash
    pip install -r requirements.txt
-3. Відкрийте папку notebooks/ та запустіть перший файл для перегляду аналізу.
+3. Open the notebooks/ folder and run the first file to view the analysis.
 
 ---
 
-## 👤 Автор
-**Ілона Осипенко**
+## 👤 Author
+**Ilona Osypenko, student of Odesa National Polytechnic University**
