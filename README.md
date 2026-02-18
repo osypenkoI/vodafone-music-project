@@ -2,6 +2,7 @@
 
 ## 📌 Project Overview
 This project is dedicated to developing a machine learning model for predicting the likelihood of Vodafone subscribers signing up for a music service.
+
 This is a **binary classification** task, where the target variable indicates whether the user has subscribed (1) or not (0).
 
 **Business goal:** Optimize marketing campaigns by identifying customers who are highly likely to be interested in the service. This will reduce the cost of communicating with uninterested subscribers.
@@ -42,7 +43,7 @@ The project is organized this way:
 ## 🚀 Getting Started
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/osypenkoI/vodafone-music-project.git](https://github.com/osypenkoI/vodafone-music-project.git)
+   git clone https://github.com/osypenkoI/vodafone-music-project.git
 2. Install the necessary libraries:
    ```bash
    pip install -r requirements.txt
