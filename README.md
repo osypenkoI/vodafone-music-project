@@ -35,11 +35,11 @@ The project is organized this way:
 ```
 
 This project follows a full machine learning pipeline:
-* data exploration,
-* cleaning,
-* preprocessing,
-* modeling,
-* evaluation.
+- Data exploration
+- Cleaning
+- Preprocessing
+- Modeling
+- Evaluation
 
 ---
 
@@ -62,13 +62,15 @@ This project follows a full machine learning pipeline:
 1. Clone the repository:
    ```bash
    git clone https://github.com/osypenkoI/vodafone-music-project.git
+   ```
 2. Install the necessary libraries:
    ```bash
    pip install -r requirements.txt
+   ```
 3. Open the notebooks/ folder and run the first file to view the analysis.
 
 ---
 
 ## 👤 Author
-Ilona Osypenko  
-Data Science Project
+* **Ilona Osypenko**
+* **Data Science Project**
