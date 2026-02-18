@@ -9,9 +9,13 @@ This is a **binary classification** task, where the target variable indicates wh
 
 ---
 
-## 🎯 Goals & Metrics
-* **Primary metric:** ROC-AUC. This metric was selected because it allows the quality of the model to be evaluated independently of the selected classification threshold and is resistant to class imbalance.
-* **Additional metrics:** F1-score, Precision, Recall.
+## 📊 Key Findings (EDA)
+
+- The dataset contains 70,000 records and 461 features.
+- A strong class imbalance was detected (7.6% positive class).
+- Most individual features show weak linear correlation with the target variable.
+- Behavioral activity features (content usage, app activity) demonstrate moderate predictive potential.
+- Customer tenure (`lt`) shows the strongest negative correlation with subscription.
 
 ---
 
@@ -20,15 +24,22 @@ The project is organized this way:
 
 ```
 ├── data/
-│   ├── raw/             # Raw data (unchanged)
-│   └── processed/       # Cleaned data for modeling
-├── notebooks/           # Jupyter Notebooks with analysis and code
-│   ├── 01_eda.ipynb     # Exploratory data analysis (EDA)
-│   └── 02_cleaning.ipynb # Data cleaning and missing 
-├── src/                 # Python scripts
-├── README.md            # Project description
-└── requirements.txt     # List of required libraries
+│   ├── raw/              # Raw data (unchanged)
+│   └── processed/        # Cleaned data for modeling
+├── notebooks/            # Jupyter Notebooks with analysis and code
+│   ├── 01_eda.ipynb      # Exploratory data analysis (EDA)
+│   └── 02_cleaning.ipynb # Data cleaning and missing value handling
+├── src/                  # Python scripts
+├── README.md             # Project description
+└── requirements.txt      # List of required libraries
 ```
+
+---
+
+## 🎯 Goals & Metrics
+* **Primary metric:** ROC-AUC. This metric was selected because it allows the quality of the model to be evaluated independently of the selected classification threshold and is resistant to class imbalance.
+* **Additional metrics:** F1-score, Precision, Recall.
+
 ---
 
 ## 🛠 Tech Stack
