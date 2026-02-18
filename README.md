@@ -5,7 +5,7 @@ This project is dedicated to developing a machine learning model for predicting 
 
 This is a **binary classification** task, where the target variable indicates whether the user has subscribed (1) or not (0).
 
-**Business goal:** Optimize marketing campaigns by identifying customers who are highly likely to be interested in the service. This will reduce the cost of communicating with uninterested subscribers.
+**Business goal:** Optimize marketing campaigns by identifying customers who are highly likely to be interested in the service. This enables more efficient allocation of marketing resources and improves campaign ROI.
 
 ---
 
@@ -34,6 +34,13 @@ The project is organized this way:
 └── requirements.txt      # List of required libraries
 ```
 
+This project follows a full machine learning pipeline:
+* data exploration,
+* cleaning,
+* preprocessing,
+* modeling,
+* evaluation.
+
 ---
 
 ## 🎯 Goals & Metrics
@@ -43,7 +50,7 @@ The project is organized this way:
 ---
 
 ## 🛠 Tech Stack
-* **Python 3.11.9**
+* **Python 3.11**
 * **Pandas, NumPy:** Data processing
 * **Matplotlib, Seaborn:** Visualization and EDA
 * **Scikit-learn:** Machine learning
@@ -63,4 +70,5 @@ The project is organized this way:
 ---
 
 ## 👤 Author
-**Ilona Osypenko, student of Odesa National Polytechnic University**
+Ilona Osypenko  
+Data Science Project
