@@ -1,0 +1,10 @@
+{
+  "best_model": "XGBoost (tuned)",
+  "val_auc": 0.8371,
+  "val_ap": 0.3265,
+  "cv_auc": 0.8269,
+  "cv_std": 0,
+  "optimal_threshold": 0.69,
+  "n_features_used": 514,
+  "baseline_auc_sprint2": 0.8261
+}
