@@ -209,3 +209,7 @@ __marimo__/
 *.csv
 data/raw/*.csv
 data/processed/*.csv
+models/*.pkl
+!models/sprint3_results.csv
+!models/selected_features.csv
+notebooks/catboost_info/

@@ -1,1 +1,1 @@
-{"best_model":"LightGBM","best_threshold":0.6,"best_val_auc":0.8260527544}
+{"best_model":"LightGBM","best_threshold":0.62,"best_val_auc":0.8277807588}
