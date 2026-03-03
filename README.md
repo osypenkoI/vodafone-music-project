@@ -1,76 +1,75 @@
 # 🎵 Vodafone Music Subscription Prediction
 
 ## 📌 Project Overview
-This project is dedicated to developing a machine learning model for predicting the likelihood of Vodafone subscribers signing up for a music service.
+Binary classification task: predict whether a Vodafone subscriber will purchase the Music service.
 
-This is a **binary classification** task, where the target variable indicates whether the user has subscribed (1) or not (0).
-
-**Business goal:** Optimize marketing campaigns by identifying customers who are highly likely to be interested in the service. This enables more efficient allocation of marketing resources and improves campaign ROI.
+**Business goal:** Optimize marketing campaigns by identifying high-potential customers — enabling more efficient allocation of marketing resources and improving campaign ROI.
 
 ---
 
-## 📊 Key Findings (EDA)
+## 📊 Key Results
 
-- The dataset contains 70,000 records and 461 features.
-- A strong class imbalance was detected (7.6% positive class).
-- Most individual features show weak linear correlation with the target variable.
-- Behavioral activity features (content usage, app activity) demonstrate moderate predictive potential.
-- Customer tenure (`lt`) shows the strongest negative correlation with subscription.
+| Sprint | Model | Val ROC-AUC |
+|--------|-------|-------------|
+| 2 | Logistic Regression | 0.8013 |
+| 2 | Random Forest | 0.8158 |
+| 2 | LightGBM | 0.8261 |
+| 3 | **XGBoost (tuned)** | **0.8371** |
+
+**Final model:** XGBoost with RandomizedSearchCV tuning  
+**Improvement vs baseline:** +0.011 AUC  
+**Optimal threshold:** 0.69
 
 ---
 
 ## 📂 Project Structure
-The project is organized this way:
-
 ```
 ├── data/
-│   ├── raw/              # Raw data (unchanged)
-│   └── processed/        # Cleaned data for modeling
-├── notebooks/            # Jupyter Notebooks with analysis and code
-│   ├── 01_eda.ipynb      # Exploratory data analysis (EDA)
-│   └── 02_cleaning.ipynb # Data cleaning and missing value handling
-├── src/                  # Python scripts
-├── README.md             # Project description
-└── requirements.txt      # List of required libraries
+│   ├── raw/                        # Raw data (unchanged)
+│   └── processed/                  # Cleaned & engineered data
+├── models/
+│   ├── final_results.json          # Final model metrics
+│   ├── sprint3_results.csv         # Sprint 3 comparison
+│   └── selected_features.csv       # 514 selected features
+├── notebooks/
+│   ├── 01_data_understanding.ipynb # EDA & data overview
+│   ├── 02_cleaning.ipynb           # Missing values & cleaning
+│   ├── 03_eda.ipynb                # Deep EDA & correlations
+│   ├── 04_feature_engineering.ipynb# Feature creation (430 → 576)
+│   ├── 05_baseline_models.ipynb    # LR, RF, LightGBM
+│   ├── 06_model_improvement.ipynb  # XGBoost, CatBoost, tuning
+│   └── 07_final_report.ipynb       # Final summary & recommendations
+├── src/
+├── README.md
+└── requirements.txt
 ```
-
-This project follows a full machine learning pipeline:
-- Data exploration
-- Cleaning
-- Preprocessing
-- Modeling
-- Evaluation
 
 ---
 
-## 🎯 Goals & Metrics
-* **Primary metric:** ROC-AUC. This metric was selected because it allows the quality of the model to be evaluated independently of the selected classification threshold and is resistant to class imbalance.
-* **Additional metrics:** F1-score, Precision, Recall.
+## 🎯 Metrics
+- **Primary:** ROC-AUC (imbalance-resistant)
+- **Additional:** F1-score, Precision, Recall, Average Precision
 
 ---
 
 ## 🛠 Tech Stack
-* **Python 3.11**
-* **Pandas, NumPy:** Data processing
-* **Matplotlib, Seaborn:** Visualization and EDA
-* **Scikit-learn:** Machine learning
-* **Jupyter Notebook:** Development environment
+- **Python 3.11**
+- **Pandas, NumPy** — data processing
+- **Matplotlib, Seaborn** — visualization
+- **Scikit-learn** — modeling & validation
+- **LightGBM, XGBoost, CatBoost** — gradient boosting
+- **Jupyter Notebook** — development environment
 
 ---
 
 ## 🚀 Getting Started
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/osypenkoI/vodafone-music-project.git
-   ```
-2. Install the necessary libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Open the notebooks/ folder and run the first file to view the analysis.
+```bash
+git clone https://github.com/osypenkoI/vodafone-music-project.git
+pip install -r requirements.txt
+```
+Run notebooks in order: 01 → 02 → 03 → 04 → 05 → 06 → 07
 
 ---
 
 ## 👤 Author
-* **Ilona Osypenko**
-* **Data Science Project**
+**Ilona Osypenko** — Data Science Internship
