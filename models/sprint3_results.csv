@@ -1,0 +1,5 @@
+Model,CV AUC,Val AUC
+XGBoost,0.8178,0.8352
+CatBoost,0.8226,0.8343
+LightGBM,0.8105,0.8248
+XGBoost (tuned),0.8269,0.8371
